@@ -2,6 +2,8 @@
 This repository describes a clear and abstract way of handling Repositories, Models &amp; Middleware.
 MongoDb is used as database for this example (mongoose as schema).
 
+Abstraction is always a challenge for developers & software designers. The abstraction way of looking at software is often forgotten, and that's whay it's always a good attitude to keep abstraction in mind.
+
 ### Generic Model
 Generic Abstract Model with flexible schema injection (name of the model as argument).
 
