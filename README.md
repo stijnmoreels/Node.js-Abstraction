@@ -4,6 +4,8 @@ MongoDb is used as database for this example (mongoose as schema).
 
 Abstraction is always a challenge for developers & software designers. The abstraction way of looking at software is often forgotten, and that's whay it's always a good practice to keep abstraction in mind.
 
+With this example in mind, you can create a scalable application with just ONE Generic Model Module and ONE Generic Repository Module.
+
 ### Generic Model
 Generic Abstract Model with flexible schema injection (name of the model as argument).
 
