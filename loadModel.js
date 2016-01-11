@@ -8,7 +8,7 @@
  module.exports = (function (repository) {
     return function (request, response, next) {
         var id = request.params.id || request.body._id;
-        repository.getOne(parseInt(id), function (error, doc) {
+        repository.getOne(id, function (error, doc) {
             if (error) { throw error; }
             else request.model = doc;
             next();
