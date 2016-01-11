@@ -5,10 +5,11 @@
  * @purpose: Generic Model
  =============================================================================*/
 
-module.exports = (function (name) {
+module.exports = (function (name, schemaPath) {
     var mongoose = require('mongoose'),
-        schemePath = "./scheme/" + name + "Scheme.js",
-        scheme = null;
+        schema = null,
+        schemePath = schemaPath === undefined ? 
+            "./scheme/" + name + "Scheme.js" : schemaPath;
     if (require.resolve(schemePath)) {
         scheme = require(schemePath);
     }
