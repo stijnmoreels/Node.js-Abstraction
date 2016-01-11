@@ -10,7 +10,11 @@ With this example in mind, you can create a scalable application with just ONE G
 Generic Abstract Model with flexible schema injection (name of the model as argument).
 
 ```javascript
+// Default Schema Path: './schema/{name}Schema.js'
 var employee = require('./model.js')('Employee');
+
+// Custom Schema Path: './schemas/schemaEmployee.js'
+var employee = require('./model.js')('Employee', './schemas/schemaEmployee.js');
 ```
 
 ### Generic Repository
