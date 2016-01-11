@@ -2,7 +2,7 @@
 This repository describes a clear and abstract way of handling Repositories, Models &amp; Middleware.
 MongoDb is used as database for this example (mongoose as schema).
 
-_Abstraction_ is always a challenge for developers & software designers. The abstraction way of looking at software is often forgotten, and that's whay it's always a good practice to keep abstraction in mind.
+**Abstraction** is always a challenge for developers & software designers. The abstraction way of looking at software is often forgotten, and that's whay it's always a good practice to keep abstraction in mind.
 
 With this example in mind, you can create a scalable application with just _ONE_ Generic Model Module and _ONE_ Generic Repository Module. It will not only give your team a greater understanding of what is going on in the Backend, it certainly will increase the readability of your code.
 
