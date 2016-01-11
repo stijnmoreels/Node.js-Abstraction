@@ -6,12 +6,14 @@
  =============================================================================*/
  
  module.exports = (function (model) {
-    function getAll(wheres, callback) {
-        if (typeof wheres == 'function') {
-            callback = wheres;
-            wheres = null;
+    var argsEmpty = { sort: null, where: null };
+
+    function getAll(args, callback) {
+        if (typeof args === 'function') {
+            callback = args;
+            args = argsEmpty;
         }
-        model.find({}).where(wheres).exec(function (error, docs) {
+        model.find({}).where(args.where).sort(args.sort).exec(function (error, docs) {
             if (error) { throw error; }
             else callback(null, docs);
         });
@@ -30,6 +32,7 @@
         getAll: getAll,
         getOne: getOne,
         insert: insertDocument,
-        update: updateDocument
+        update: updateDocument,
+        argsEmpty: argsEmpty
     };
 });
