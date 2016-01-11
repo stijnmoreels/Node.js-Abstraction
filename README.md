@@ -26,9 +26,13 @@ var employeeRepository = require('./genericRepository.js')(employee);
 ```
 
 ##### Usage
+Feel free to work upon and adapt for more functionalities.
+
 ```javascript
+// Without extra arguments (gets all items)
 employeeRepository.getAll(function(error, employees) { });
 
+// With extra arguments (where & sort)
 employeeRepository.getAll({ where: { name: 'Bob' }, sort: 'name' }, function(error, employees) { });
 ```
 
