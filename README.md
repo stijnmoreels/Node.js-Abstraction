@@ -40,9 +40,7 @@ employeeRepository.getAll({ where: { name: 'Bob' }, sort: 'name' }, function(err
 ### Generic Middleware
 As finishing touch, a Generic Middleware library (Only one implementation). I always wanted a middleware library that I could use in different situations, and not only ONE middleware library for ONE usage. 
 
-This solutions provides a middleware library for loading a single entity. During the initialisation of the library, a **function** must be passed by in the constructor (```employeeRepository.getOne```). The reason I chose a function as parameter and not the whole Repository is that now you have less to pass by in the constructor and the middleware is now **Repository independent**.  
-
-This function wil be executed in the middleware.
+This solutions provides a middleware library for loading a single entity. During the initialisation of the library, a **function** must be passed by in the constructor (```employeeRepository.getOne``` = this function wil be executed in the middleware.). The reason I chose a function as parameter and not the whole Repository is that now you have less to pass by in the constructor and the middleware is now **Repository independent**.  
 
 ```javascript
 var employee = require('./model.js')('Employee');
