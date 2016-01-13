@@ -5,10 +5,10 @@
  * @purpose: Generic Middleware
  =============================================================================*/
  
- module.exports = (function (repository) {
+ module.exports = (function (func) {
     return function (request, response, next) {
         var id = request.params.id || request.body._id;
-        repository.getOne(id, function (error, doc) {
+        func(id, function (error, doc) {
             if (error) { throw error; }
             else request.model = doc;
             next();
